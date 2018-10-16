@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: SpringCloud-Ribbon-Client
+ 
+# serverSideIps is variable to manage list of server side application ip list
+# serverSideIps is configured in SpringCloudRibbonClientApplication.java and ClientController.java
+     
+serverSideIps:
+  ribbon:
+    eureka:
+      enabled: false
+    listOfServers: localhost:8091,localhost:8092,localhost:8093
+    ServerListRefreshInterval: 1000
+    
+server:
+  port: 8090
